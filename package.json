@@ -1,0 +1,28 @@
+{
+  "name": "jnt-suppliers-wms",
+  "version": "1.0.0",
+  "description": "JNT Suppliers Warehouse Management System",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "node server/index.js",
+    "client": "cd client && npm run dev",
+    "install:all": "npm install && cd client && npm install",
+    "build": "cd client && npm run build",
+    "db:init": "node server/scripts/initDb.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "better-sqlite3": "^11.6.0",
+    "cors": "^2.8.5",
+    "express": "^4.21.1",
+    "jsonwebtoken": "^9.0.2",
+    "xlsx": "^0.18.5",
+    "pdfkit": "^0.15.0",
+    "qrcode": "^1.5.4",
+    "bwip-js": "^4.3.0"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0"
+  }
+}
